@@ -1,0 +1,14 @@
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 94%;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.title-menu {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px auto;
+  width: 94%;
+}
