@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  height: 60px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: #2f8cdd;
+}
+
+.search-input {
+  width: 60%;
+}
