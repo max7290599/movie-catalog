@@ -19,8 +19,4 @@
 
 .card-info {
   width: 94%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  height: 50%;
 }

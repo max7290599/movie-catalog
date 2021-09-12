@@ -2,9 +2,17 @@
   display: flex;
   justify-content: center;
   margin: 15px auto;
+  height: 50px;
 }
 
 .btn {
   border: none;
   cursor: pointer;
+  height: 22px;
+  margin: 5px 0;
+  background: #fff;
+}
+
+.btn:hover {
+  border: 1px solid #5701f7;
 }
