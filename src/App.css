@@ -1,9 +1,9 @@
 .container-card {
   display: flex;
   flex-wrap: wrap;
-  width: 94%;
+  width: 96%;
   margin: 20px auto;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .title-menu {
