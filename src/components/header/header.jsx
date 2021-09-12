@@ -5,7 +5,7 @@ import './header.css';
 const Header = ({setDataMovie, setSearchMovie, setSearchTotalResults}) => {
   const searchHandle = async (e) => {
       if(e.key === 'Enter'){
-        const data = await getMovie(e.target.value, 2);
+        const data = await getMovie(e.target.value);
         setDataMovie(data.Search);
         setSearchMovie(e.target.value);
         setSearchTotalResults(data.totalResults);
@@ -17,6 +17,7 @@ const Header = ({setDataMovie, setSearchMovie, setSearchTotalResults}) => {
       <h2>Movie Catalog</h2>
       <input type="text" className="search-input" onKeyPress={searchHandle} placeholder="Search..."/>
       <div className="container-avatar">
+        <img src="../../public/avatar.png"/>
       <h6>Atroschenko Maxim</h6>
       </div>
     </div>

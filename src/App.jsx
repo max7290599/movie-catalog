@@ -4,6 +4,7 @@ import CardMovie from './components/card-movie/card-movie';
 import {INTRO} from './constants';
 
 import './App.css';
+import Pagination from './components/pagination/pagination';
 
 
 const App = () => {
@@ -24,7 +25,12 @@ const App = () => {
       <div className="container-card">
         {dataMovie.map((item)=> <CardMovie movie={item}/>)}
       </div>
-      
+      {dataMovie.length ? <Pagination
+        setDataMovie={setDataMovie}
+        searchMovie={searchMovie}
+        setSearchTotalResults={setSearchTotalResults} 
+        searchTotalResults={searchTotalResults}
+      /> : ''}
     </div>
   );
 }
