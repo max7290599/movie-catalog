@@ -1,11 +1,8 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import Header from './components/header/header';
-import CardMovie from './components/card-movie/card-movie';
-import {INTRO} from './constants';
-
+import Main from './components/main/main';
+import ErrorSearch from './components/error-search/error-search';
 import './App.css';
-import Pagination from './components/pagination/pagination';
-
 
 const App = () => {
   const [dataMovie, setDataMovie] = React.useState([]);
@@ -19,18 +16,17 @@ const App = () => {
         setSearchMovie={setSearchMovie}
         setSearchTotalResults={setSearchTotalResults}
       />
-      <div className="title-menu">
-        {dataMovie.length ? `You searched for: ${searchMovie}, ${searchTotalResults} results found `: INTRO}
-      </div>
-      <div className="container-card">
-        {dataMovie.map((item)=> <CardMovie movie={item}/>)}
-      </div>
-      {dataMovie.length ? <Pagination
-        setDataMovie={setDataMovie}
-        searchMovie={searchMovie}
-        setSearchTotalResults={setSearchTotalResults} 
-        searchTotalResults={searchTotalResults}
-      /> : ''}
+      <Suspense fallback={<div>Loading...</div>}>
+        {dataMovie === undefined ? <ErrorSearch searchMovie={searchMovie}/> : 
+          <Main 
+            setDataMovie={setDataMovie}
+            setSearchTotalResults={setSearchTotalResults}
+            dataMovie={dataMovie}
+            searchMovie={searchMovie}
+            searchTotalResults={searchTotalResults}
+          />
+        }
+      </Suspense>
     </div>
   );
 }

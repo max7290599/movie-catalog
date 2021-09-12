@@ -14,8 +14,6 @@ const Pagination = ({setDataMovie, searchMovie, setSearchTotalResults, searchTot
       setIsDisabledLeftBtn(false);
     };
 
-    console.log(searchTotalResults)
-
     if (searchTotalResults/10 <= countPage) {
       setIsDisabledRightBtn(true);
     } else {

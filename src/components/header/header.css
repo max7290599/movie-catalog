@@ -10,5 +10,16 @@
 }
 
 .search-input {
-  width: 60%;
+  width: 57%;
+}
+
+.container-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-img {
+  margin: 0 10px 0 0;
+  width: 24px;
+  height: 23px;
 }
